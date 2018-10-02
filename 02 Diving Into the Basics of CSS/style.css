@@ -1,0 +1,28 @@
+body{
+    font-family: Century Gothic;
+}
+
+section{
+    background: #ff1b68;
+}
+
+h1{
+    color: white;
+}
+.success{
+    font-family: sans-serif;
+}
+.error{
+    color:white;
+    font-size: 25px;
+}
+
+h2 > p{
+    color: red;
+}
+
+.names{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}

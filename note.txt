@@ -1,0 +1,139 @@
+
+>> 02 - Diving into the basic of CSS <<
+    
+Outline: 
+
+- How to add CSS to HTML
+- Setting up CSS Rules
+- Selectors, properties, values
+- Conflict Styles
+
+
+    Inline styling - styling element into tag:
+        <section style=""></section>
+
+    Declaration simply means what you to style
+
+Selectors
+
+- Elements - set equal style for these elements
+- Classes - set equal style for elements within the sme Classes
+- Universal - * - using all tag and classes
+- IDs - set style to one specific element
+- Attributes - set equal styles to all element with attributes
+
+Attributes example 
+
+<button disable > Hello </button>
+
+disable {
+    color: red;
+}
+
+Files parsed from top to bottom
+
+ Cascading - multiple rules can be apply to the same element
+    but they can conflict with each other
+
+CSS has specifity - resolve conflicts arising from multiple rules
+
+>    <Tag> and ::pseudo-elements selectors  - have the lowest specifity
+
+>   .class, ::pseudo-class and [attribute] selectors - have the medium
+
+>   #ID selectors and inline Styles have the highest specifity
+
+Combinators select multiple selectors
+
+>   Adjacent Sibling 
+
+        div + p {
+
+        }
+
+    - Element share the same parent
+    - Second Element comes immediately after first element
+
+    Example:
+
+        <div>
+            <h2>Not applied</h2>
+                <p>CSS applied</p>
+            <h2>Not applied</h2>
+            <h3>Not applied</h3>
+            <p>Not applied</p>
+            <h2>Not applied</h2>
+                <p>CSS applied</p>
+        </div>
+
+        h2 + p {
+            color: red;
+        }
+
+
+
+>   General Sibling 
+
+    div ~ p {
+
+    }
+
+    - Element share the same parent
+    - Second element comes after first element
+
+    Example:
+
+        <div>
+            <h2>Not applied</h2>
+                <p>CSS applied</p>
+            <h2>Not applied</h2>
+            <h3>Not applied</h3>
+                <p>CSS applied</p>
+            <h2>Not applied</h2>
+                <p>CSS applied</p>
+        </div>
+
+        h2 ~ p {
+            color: red;
+        }
+
+
+>   Child 
+
+    div > p {
+
+    }
+
+    - Second element is a direct child of first element
+
+
+>   Descendant
+
+    div p {
+
+    }
+
+
+Values are tightly coupled to specific property
+
+    - Pre-defined Options
+        Example: display: block;
+                 overflow: auto;
+
+    - Colors  
+        Example: background: red;
+                 color: #ffffff;
+    
+    - Length, sizes, numbers 
+        Example: height: 100px;
+                 width: 10%;
+
+    - Functions
+        Example: background: url("");
+                 transform: scale(...);
+ 
+
+
+
+
+>> 03 Diving Deeper into CSS <<
